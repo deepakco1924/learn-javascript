@@ -13,3 +13,6 @@ let v = 40 + 4 + 2 + 10 - 20; //making first variable
 // console.log(middle);
 
 //data types
+let rate = false;
+console.log(rate);
+console.log(typeof rate);
