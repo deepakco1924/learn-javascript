@@ -2,8 +2,11 @@
 let secreatNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 // document.querySelector(".number").textContent = secreatNumber;
+
+//game program started here
 let highScore = 0;
 console.log(secreatNumber);
+//utility function to refactor the code
 function checkDifferentScore(high) {
   if (score > 1) {
     document.querySelector(".message").textContent =
@@ -16,6 +19,7 @@ function checkDifferentScore(high) {
     document.querySelector(".message").textContent = "You Lost the Game";
   }
 }
+//changes here is refelected
 document.querySelector(".check").addEventListener("click", function () {
   const guess = Number(document.querySelector(".guess").value);
   if (!guess) {
@@ -35,6 +39,7 @@ document.querySelector(".check").addEventListener("click", function () {
     checkDifferentScore(false);
   }
 });
+//added the reset eventlistner
 document.querySelector(".again").addEventListener("click", function () {
   document.querySelector(".score").textContent = 20;
   document.querySelector("body").style.backgroundColor = "#222";
