@@ -70,7 +70,7 @@ btnRoll.addEventListener('click', function () {
   }
 });
 
-//holding the current score  and to original score of active player
+//holding the current score  and add to original score of active player
 btnHold.addEventListener('click', function () {
   if (playing) {
     let player = document.getElementById(`score--${activePlayer}`);
