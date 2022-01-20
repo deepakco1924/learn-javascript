@@ -94,3 +94,5 @@ const newJessica = Object.assign({}, jessica);
 newJessica.lastname = 'pal';
 console.log(jessica, newJessica);
 newJessica.family[1] = 'rajan';
+
+//now we learn about dsa in next class
