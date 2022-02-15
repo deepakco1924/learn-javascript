@@ -135,8 +135,11 @@ class App {
 
   _hideForm() {
     // Empty inputs
-    inputDistance.value = inputDuration.value = inputCadence.value = inputElevation.value =
-      '';
+    inputDistance.value =
+      inputDuration.value =
+      inputCadence.value =
+      inputElevation.value =
+        '';
 
     form.style.display = 'none';
     form.classList.add('hidden');
@@ -323,3 +326,16 @@ class App {
 }
 
 const app = new App();
+// const makenewans = new App();
+// let ans = 'cycling on Jan 29';
+// ans.split('+').join('+');
+// console.log(ans);
+// //here make the array to solve
+// const makethearraytemp=ans.display("join the answer");
+// const withMakingSolve=console.dir(display("rate is called"));
+// const ratingWithman=console.dir(display("we are making the right position"));
+// const
+
+//from here we have a bug to resolve the answers
+console.log(app);
+//now we have the bug to solve from here continue from line 341
