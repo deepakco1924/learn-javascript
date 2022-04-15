@@ -10,7 +10,7 @@
 // DIFFERENT DATA! Contains movement dates, currency and locale
 
 const account1 = {
-  owner: 'Jonas Schmedtmann',
+  owner: 'Deepak pal',
   movements: [200, 455.23, -306.5, 25000, -642.21, -133.9, 79.97, 1300],
   interestRate: 1.2, // %
   pin: 1111,
@@ -49,11 +49,32 @@ const account2 = {
   locale: 'en-US',
 };
 
-const accounts = [account1, account2];
+const account3 = {
+  owner: 'kamal kumar',
+  movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
+  interestRate: 1.5,
+  pin: 4444,
+
+  movementsDates: [
+    '2019-11-01T13:15:33.035Z',
+    '2019-11-30T09:48:16.867Z',
+    '2019-12-25T06:04:23.907Z',
+    '2020-01-25T14:18:46.235Z',
+    '2020-02-05T16:33:06.386Z',
+    '2020-04-10T14:43:26.374Z',
+    '2020-06-25T18:49:59.371Z',
+    '2020-07-26T12:01:20.894Z',
+  ],
+  currency: 'USD',
+  locale: 'en-US',
+};
+
+const accounts = [account1, account2, account3];
 
 /////////////////////////////////////////////////
 // Elements
 const labelWelcome = document.querySelector('.welcome');
+
 const labelDate = document.querySelector('.date');
 const labelBalance = document.querySelector('.balance__value');
 const labelSumIn = document.querySelector('.summary__value--in');
@@ -200,7 +221,7 @@ const year = now.getFullYear();
 const hour = `${now.getHours()}`.padStart(2, 0);
 const minutes = `${now.getMinutes()}`.padStart(2, 0);
 // labelDate.textContent = `${date}/${month}/${year},${hour}:${minutes}`;
-labelDate.textContent = new Intl.DateTimeFormat('ko-KR').format(new Date());
+labelDate.textContent = new Intl.DateTimeFormat('hi-IN').format(new Date());
 
 const startLogOutTimer = function () {
   //set time to 5min
@@ -325,7 +346,7 @@ btnClose.addEventListener('click', function (e) {
 let sorted = false;
 btnSort.addEventListener('click', function (e) {
   e.preventDefault();
-  displayMovements(currentAccount.movements, !sorted);
+  displayMovements(currentAccount, !sorted);
   sorted = !sorted;
 });
 
@@ -376,14 +397,80 @@ const firstimer = setTimeout(
 if (ingeridents.includes('spinach')) {
   clearTimeout(firstimer);
 }
-console.log('we are wating...');
-setInterval(function () {
-  const date = new Date();
-  console.log(
-    new Intl.DateTimeFormat('en-US', {
-      hour: 'numeric',
-      minute: 'numeric',
-      second: 'numeric',
-    }).format(date)
-  );
-}, 5000);
+// console.log('we are wating...');
+// setInterval(function () {
+//   const date = new Date();
+//   console.log(
+//     new Intl.DateTimeFormat('en-US', {
+//       hour: 'numeric',
+//       minute: 'numeric',
+//       second: 'numeric',
+//     }).format(date)
+//   );
+// }, 5000);
+// let counter = 1000;
+// const newtimer = setInterval(function () {
+//   counter--;
+//   console.log(counter);
+// }, 6000);
+
+// const newtimer = setInterval(() => {
+//   const date = new Date();
+//   const options = {
+//     hour: 'numeric',
+//     second: 'numeric',
+//     minute: 'numeric',
+//   };
+//   console.log(new Intl.DateTimeFormat('en-US', options).format(date));
+//   //make the new date for the us time
+// }, 1000);
+
+// //now make the array for the moist to reqyuired to solve the create
+// let timernew = 1000;
+// const worktime = setInterval(() => {
+//   timernew--;
+//   console.log(`new match find in the js ${timernew}`);
+// }, 2000);
+
+// const constantarray = [account1, account2, account2];
+// console.log(constantarray);
+// const newtime = new Intl.NumberFormat('en-US', {
+//   style: 'currency',
+//   currency: 'USD',
+// }).format(timernew);
+
+const makesotedarray = function (acc) {
+  const makearray = acc.movements.sort((a, b) => {
+    return a - b;
+  });
+};
+const newterminateor = function (acc, issorted) {
+  if (issorted == false) {
+    const makearray = acc.movements.sort((a, b) => a - b);
+    labelDate.textContent = `${makearray[0]}`;
+  }
+};
+const makingadditionsarray = function (add, solve) {
+  const x = add.sort((a, b) => a - b);
+  const y = solve.qsort((a, b) => a - b);
+  const newarray = [...x, ...y];
+  const finalarray = newarray.sort((a, b) => a - b);
+  const decendarray = newarray.sort((a, b) => b - a);
+  //this is our final array which contains the details of custmors
+  const finalisedarray = decendarray
+    .map(ele => ele * 3 + 10)
+    .filter(ele => ele > 0 && ele < 10)
+    .reduce((acc, ele, index, arr) => {
+      return acc + ele;
+    });
+};
+
+//app is ready to pull on the git
+//just make the array for the new account and pull the new customer details to the array
+const mydate = new Date();
+console.log(new Intl.DateTimeFormat('hi-IN').format(mydate));
+console.log(navigator.language);
+console.log(mydate);
+
+//WE HAVE TO CHANGE THE LOGO AND BACK NAME AND THE README FILE
+console.log(new Date(0));
