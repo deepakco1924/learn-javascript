@@ -386,7 +386,7 @@ const createDots = function () {
   });
 };
 createDots();
-adctivateDot(0);
+void adctivateDot(0);
 dotContainer.addEventListener('click', function (e) {
   if (e.target.classList.contains('dots__dot')) {
     const slide = e.target.dataset.slide;
