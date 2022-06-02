@@ -14,7 +14,7 @@ var limits = {
   matilda: 100,
 };
 
-var add = function (value, description, user) {
+var addExpenses = function (value, description, user) {
   if (!user) user = 'jonas';
   user = user.toLowerCase();
 
@@ -29,12 +29,12 @@ var add = function (value, description, user) {
     budget.push({ value: -value, description: description, user: user });
   }
 };
-add(10, 'Pizza 🍕');
-add(100, 'Going to movies 🍿', 'Matilda');
-add(200, 'Stuff', 'Jay');
+addExpenses(10, 'Pizza 🍕');
+addExpenses(100, 'Going to movies 🍿', 'Matilda');
+addExpenses(200, 'Stuff', 'Jay');
 console.log(budget);
 
-var check = function () {
+var checkBudget = function () {
   for (var el of budget) {
     var lim;
     if (limits[el.user]) {
@@ -48,7 +48,7 @@ var check = function () {
     }
   }
 };
-check();
+checkBudget();
 
 console.log(budget);
 
